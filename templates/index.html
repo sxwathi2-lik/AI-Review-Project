@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Review Analyzer</title>
+</head>
+<body style="text-align:center; font-family:Arial; background:#222; color:white;">
+
+<h1>🤖 AI Review Analyzer</h1>
+
+<form action="/predict" method="post">
+<textarea name="review" placeholder="Enter review..." style="width:60%;height:100px;"></textarea><br><br>
+<button type="submit">Analyze</button>
+</form>
+
+{% if result %}
+<h2>{{ result }}</h2>
+<h3>{{ sentiment }}</h3>
+<h3>Trust Score: {{ trust }}%</h3>
+{% endif %}
+
+</body>
+</html>
